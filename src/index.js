@@ -55,11 +55,12 @@ const init = (db) => {
     dataSources: () => ({
       mongoCarAPI: new MongoCarAPI(db.collection("cars")),
       mongoQuoteAPI: new MongoQuoteAPI(db.collection("leaseQuotes")),
-      sqlCarAPI: SQLCarDataSource,
-      zipAPI: new NYZipAPI(),
+      // comment other datasources out to focus on mongo to start
+      // sqlCarAPI: SQLCarDataSource,
+      // zipAPI: new NYZipAPI(),
       // will need to migrate this from SQL to Mongo
-      taxAPI: new NYTaxAPI(knexConfig),
-      insuranceEstimateAPI: new InsuranceEstimateAPI(knexConfig),
+      // taxAPI: new NYTaxAPI(knexConfig),
+      // insuranceEstimateAPI: new InsuranceEstimateAPI(knexConfig),
     }),
   });
 };
