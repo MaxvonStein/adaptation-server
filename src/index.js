@@ -78,7 +78,7 @@ MongoClient.connect(
 
     const server = init(db);
 
-    server.listen({ port: process.eng.PORT || 4000 }).then(({ url }) => {
+    server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
       console.log(`Server ready at ${url}`);
     });
   }
